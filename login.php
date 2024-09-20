@@ -10,7 +10,7 @@
     <a href="home.php">Voltar</a>
     <div class="tela_login">
         <h1>Login</h1>
-            <form action="" method="POST">
+            <form action="login_action.php" method="POST">
             <input placeholder="Email" name="email" type="text">
             <br/><br/>
             <input placeholder="Senha" name="senha" type="password">
