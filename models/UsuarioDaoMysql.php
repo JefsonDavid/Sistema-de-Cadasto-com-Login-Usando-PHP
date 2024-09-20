@@ -26,4 +26,17 @@
             $u->setId($this->pdo->lastInsertId());
             return $u;
         }
+
+        public function login($email, $senha) {
+            $sql = $this->pdo->prepare("SELECT * FROM formulario WHERE email = :email AND senha = :senha");
+            $sql->bindValue(':email', $email);
+            $sql->bindValue(':senha', $senha);
+            $sql->execute();
+
+            if($sql->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
