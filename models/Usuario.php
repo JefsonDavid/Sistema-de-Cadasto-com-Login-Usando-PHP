@@ -3,6 +3,7 @@
         private $id;
         private $nome;
         private $email;
+        private $senha;
         private $telefone;
         private $sexo;
         private $nascimento;
@@ -33,6 +34,14 @@
 
         public function setEmail($em) {
             $this->email = strtolower(trim($em));
+        }
+
+        public function getSenha() {
+            return $this->senha;
+        }
+
+        public function setSenha($se) {
+            $this->senha = $se;
         }
 
         public function getTelefone() {
