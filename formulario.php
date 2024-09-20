@@ -7,6 +7,7 @@
     <title>Formulário | GN</title>
 </head>
 <body>
+    <a href="home.php">Voltar</a>
     <div class="box">
         <form action="formulario_action.php" method="POST">
             <fieldset>
@@ -23,17 +24,23 @@
                 </div>
                 <br/><br/>
                 <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="label_input">Senha</label>
+                </div>
+                <br/><br/>
+                <div class="inputBox">
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label for="telefone" class="label_input">Telefone</label>
                 </div>
                 <p>Sexo</p>
-
-                <input type="radio" name="sexo" id="feminino" value="feminino" required>
-                <label for="feminino">Feminino</label>
-                <br/>
+                
                 <input type="radio" name="sexo" id="masculino" value="masculino" required>
                 <label for="masculino">Masculino</label>
                 <br/>
+                <input type="radio" name="sexo" id="feminino" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br/>
+                
                 <input type="radio" name="sexo" id="outro" value="outro" required>
                 <label for="outro">Outro</label>
                 <br/><br/>
@@ -51,11 +58,11 @@
                 </div>
                 <br/><br/>
                 <div class="inputBox">
-                    <input type="text" name="endereco" id="endeco" class="inputUser" required>
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco" class="label_input">Endereço</label>
                 </div>
                 <br/><br/>
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit" value="Cadastrar">
             </fieldset>
         </form>
     </div>

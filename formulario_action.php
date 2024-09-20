@@ -5,8 +5,9 @@
 
     $usuarioDao =  new UsuarioDaoMysql($pdo);
 
-    $name = filter_input(INPUT_POST, 'nome');
+    $nome = filter_input(INPUT_POST, 'nome');
     $email = filter_input(INPUT_POST, 'email');
+    $senha = filter_input(INPUT_POST, 'senha');
     $telefone = filter_input(INPUT_POST, 'telefone');
     $sexo = filter_input(INPUT_POST, 'sexo');
     $nascimento =  filter_input(INPUT_POST, 'nascimento');
@@ -19,6 +20,7 @@
         $novoUsuario = new Usuario();
         $novoUsuario->setNome($nome);
         $novoUsuario->setEmail($email);
+        $novoUsuario->setSenha($senha);
         $novoUsuario->setTelefone($telefone);
         $novoUsuario->setSexo($sexo);
         $novoUsuario->setNascimento($nascimento);
@@ -29,10 +31,11 @@
         $usuarioDao->adicionar($novoUsuario);
 
         echo 'Usuário Cadastrado!!!';
-        header("location: fomulario.php");
+        header("location: formulario.php");
         exit;
     } else {
-        header("location: fomulario.php");
+        echo 'Usuário NÂO Cadastrado!!!';
+        header("location: formulario.php");
         exit;
     }
 
