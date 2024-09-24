@@ -31,7 +31,7 @@
         $usuarioDao->adicionar($novoUsuario);
 
         echo 'Usuário Cadastrado!!!';
-        header("location: formulario.php");
+        header("location: login.php");
         exit;
     } else {
         echo 'Usuário NÂO Cadastrado!!!';
