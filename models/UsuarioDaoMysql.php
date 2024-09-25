@@ -39,4 +39,32 @@
                 return false;
             }
         }
+
+        public function findAll() {
+            $array = [];
+
+            $sql = $this->pdo->query("SELECT * FROM formulario");
+
+            if($sql->rowCount() > 0) {
+                $data =  $sql->fetchAll();
+
+                foreach($data as $item) {
+                    $u = new Usuario();
+                    $u->setId($item['id']);
+                    $u->setNome($item['nome']);
+                    $u->setEmail($item['email']);
+                    $u->setSenha($item['senha']);
+                    $u->SetTelefone($item['telefone']);
+                    $u->setSexo($item['sexo']);
+                    $u->setNascimento($item['data_nasc']);
+                    $u->setCidade($item['cidade']);
+                    $u->setEstado($item['estado']);
+                    $u->setEndereco($item['endereco']);
+
+                    $array[] = $u;
+                }
+            }
+
+            return $array;
+        }
     }

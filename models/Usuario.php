@@ -96,4 +96,5 @@
     interface UsuarioDao {
         public function adicionar(Usuario $u);
         public function login($email, $senha);
+        public function findAll();
     }
