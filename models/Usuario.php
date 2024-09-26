@@ -97,4 +97,6 @@
         public function adicionar(Usuario $u);
         public function login($email, $senha);
         public function findAll();
+        public function findById($id);
+        public function update(Usuario $u);
     }
