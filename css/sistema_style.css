@@ -8,3 +8,7 @@ body {
 .table-bg {
     background: rgba(red, green, blue, 0.3);
 }
+
+.login {
+    color: #fff;
+}
