@@ -111,4 +111,10 @@
 
             return true;
         }
+
+        public function delete($id) {
+            $sql = $this->pdo->prepare("DELETE FROM formulario WHERE id = :id");
+            $sql->bindValue(':id', $id);
+            $sql->execute();
+        }
     }

@@ -99,4 +99,5 @@
         public function findAll();
         public function findById($id);
         public function update(Usuario $u);
+        public function delete($id);
     }
